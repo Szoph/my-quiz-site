@@ -6,14 +6,20 @@ startButton.addEventListener('click', startQuiz)
 function startQuiz() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("question-1").style.display = "inline-block";
+    //Reassign nextButton for the current question
+    nextButton = document.getElementById('next-btn1');
+    //Add event listener for next question
     nextButton.addEventListener('click', question2)
 }
 
 function question2() {
+    //Reassign nextButton for the current question
     nextButton = document.getElementById('next-btn2');
     document.getElementById("question-1").style.display = "none";
     document.getElementById("question-2").style.display = "inline-block";
+    //Remove event listener
     nextButton.removeEventListener('click', question2);
+    //Add event listener for next question
     nextButton.addEventListener('click', question3)
 }
 
@@ -105,8 +111,8 @@ function calculateResults() {
     }
 
     let total = (q1Value) + (q2Value) + (q3Value) + (q4Value) + (q5Value) + (q6Value);
-    result = total;
-    if (result >= 30) {
+    results = total;
+    if (results >= 30) {
         document.getElementById('results-grass').style.display = 'inline-block';
     } else if (result >= 24) {
         document.getElementById('results-fire').style.display = 'inline-block';
