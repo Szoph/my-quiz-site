@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--CSS-->
+    <style>body 
+    {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+ 
+    #background-image{
+    background-image: url(pokemon-bg-opaque.jpg);
+    }
+</style>
+</head>
+
+<body>
+        <div id="background-image" class="h-screen w-full">
+
+            <div id="title">
+            <h1 class="text-4xl flex justify-center p-10">What Pokémon type are you?</h1>
+            </div>
+
+            <div id="quizarea" class="bg-white flex justify-center h-3/4 w-auto justify-items-center">
+            <!--Intro Content-->
+            <div id="intro" class="w-full h-full flex flex-col flex-row">
+                <h2 class="text-3xl p-5 flex justify-center">Find out what Pokémon type you are</h2>
+                <p class="flex justify-center">Answer the questions and get a result at the end.</p>
+                <img src="type-pic.jpg" class="h-96 w-96 flex justify-center self-center m-5">
+                
+                <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                <button id="start-btn" value="start-quiz" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Start Quiz</button>
+                </div>
+            </div>
+
+            <!--Quiz Content-->
+            <!--Question 1-->
+                <div id="question-1" class="w-full h-full hidden">
+            <form>
+                    <h2 class="flex justify-center text-4xl p-10" id="question">What is your ideal vacation destination?</h2>
+                    <div class="flex justify-items-center justify-center items-center text-xl">
+                    <input type="radio" id="q1-a1" name="answer1" value=4 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                    <label for="q1-a1">Somewhere hot</label>
+                    </div>
+                    <div class="flex justify-items-center justify-center items-center text-xl">
+                    <input type="radio" id="q1-a2" name="answer1" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                    <label for="q1-a2">Somewhere near the beach</label>
+                    </div>
+                    <div class="flex justify-items-center justify-center items-center text-xl">
+                    <input type="radio" id="q1-a3" name="answer1" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
+                    <label for="q1-a3">Somewhere I can explore</label>
+                    </div>
+                    <div class="flex justify-items-center justify-center items-center text-xl">
+                    <input type="radio" id="q1-a4" name="answer1" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                    <label for="q1-a4">Somewhere with history</label>
+                    </div>
+                    <div class="flex justify-items-center justify-center items-center text-xl">
+                    <input type="radio" id="q1-a5" name="answer1" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
+                    <label for="q1-a5">Anywhere is fine</label>
+                    </div>
+                    <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                        <button id="next-btn1" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                        </div>
+                    
+                
+                </div>
+                
+                <!--Question 2-->
+                <div id="question-2" class="w-full h-full hidden">
+                <h2 class="flex justify-center text-4xl p-10" id="question">What is your favourite colour?</h2>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q2-a1" name="answer2" value=5 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                            <label for="q2-a1">Green</label>
+                            </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q2-a2" name="answer2" value=4 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q2-a2">Red</label>
+                            </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q2-a3" name="answer2" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q2-a3">Blue</label>
+                            </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q2-a4" name="answer2" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q2-a4">Purple</label>
+                            </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q2-a5" name="answer2" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q2-a5">Yellow</label>
+                            </div>
+                            <div class="p-10 mr-20 bottom-0 right-0 flex justify-end hidden">
+                                <button id="next-btn2" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                                </div>
+                            
+                        
+                        </div>
+                        <!--Question 3-->
+                        <div id="question-3" class="w-full h-full hidden">
+                            <h2 class="flex justify-center text-4xl p-10" id="question">What appeals to you the most</h2>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                             <input type="radio" id="q3-a1" name="answer3" value=1 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                            <label for="q3-a1">Sitting at home watching a movie</label>
+                            </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q3-a2" name="answer3" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q4-a2">Swimming</label>
+                            </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q3-a3" name="answer3" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q3-a3">Picnic</label>
+                             </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q3-a4" name="answer3" value=4 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q3-a4">Spa day</label>
+                            </div>
+                            <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q3-a5" name="answer3" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                            <label for="q3-a5">Urban Exploring</label>
+                            </div>
+                
+                            <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                            <button id="next-btn3" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                             </div>
+                                
+                        </div>
+                                <!--Question 4-->
+                    <div id="question-4" class="w-full h-full hidden">
+                         <h2 class="flex justify-center text-4xl p-10" id="question">Choose a dessert</h2>
+                             <div class="flex justify-items-center justify-center items-center text-xl">
+                            <input type="radio" id="q4-a1" name="answer4" value=4 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                            <label for="q4-a1">Cake & Custard</label>
+                         </div>
+                        <div class="flex justify-items-center justify-center items-center text-xl">
+                        <input type="radio" id="q4-a2" name="answer4" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                     <label for="q4-a2">Ice Cream</label>
+                     </div>
+                     <div class="flex justify-items-center justify-center items-center text-xl">
+                <input type="radio" id="q4-a3" name="answer4" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
+                <label for="q4-a3" id="answers">Fruit & Cream</label>
+                </div>
+                <div class="flex justify-items-center justify-center items-center text-xl">
+                <input type="radio" id="q4-a4" name="answer4" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
+                <label for="q4-a4">Cheesecake</label>
+                </div>
+                <div class="flex justify-items-center justify-center items-center text-xl">
+                        <input type="radio" id="q4-a5" name="answer4" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                <label for="q4-a5">Jelly</label>
+                    </div>
+                        
+                    <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                     <button id="next-btn4" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                </div>
+                                        
+            </div>
+                <!--Question 5-->
+            <div id="question-5" class="w-full h-full hidden">
+                <h2 class="flex justify-center text-4xl p-10" id="question">Favourite film genre?</h2>
+                        <div class="flex justify-items-center justify-center items-center text-xl">
+                        <input type="radio" id="q5-a1" name="answer5" value=5 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                        <label for="q5-a1">Adventure</label>
+                        </div>
+                        <div class="flex justify-items-center justify-center items-center text-xl">
+                        <input type="radio" id="q5-a2" name="answer5" value=4 class="accent-red-600 m-5 hover:cursor-pointer">
+                        <label for="q5-a2">Action</label>
+                        </div>
+                        <div class="flex justify-items-center justify-center items-center text-xl">
+                        <input type="radio" id="q5-a3" name="answer5" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
+                        <label for="q5-a3">Comedy</label>
+                        </div>
+                        <div class="flex justify-items-center justify-center items-center text-xl">
+                        <input type="radio" id="q5-a4" name="answer5" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                        <label for="q5-a4">Horror</label>
+                        </div>
+                        <div class="flex justify-items-center justify-center items-center text-xl">
+                        <input type="radio" id="q5-a5" name="answer5" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                        <label for="q5-a5">Romance</label>
+                        </div>
+    
+                        <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                            <button id="next-btn5" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                            </div>
+                    
+                    </div>
+                    <!--Question 6-->
+                    <div id="question-5" class="w-full h-full hidden">
+                    <h2 class="flex justify-center text-4xl p-10" id="question">Favourite music genre?</h2>
+                                <div class="flex justify-items-center justify-center items-center text-xl">
+                                <input type="radio" id="q6-a1" name="answer6" value=1 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                                <label for="q6-a1">Pop</label>
+                                </div>
+                                <div class="flex justify-items-center justify-center items-center text-xl">
+                                <input type="radio" id="q6-a2" name="answer6" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                                <label for="q6-a2">Jazz</label>
+                                </div>
+                                <div class="flex justify-items-center justify-center items-center text-xl">
+                                <input type="radio" id="q6-a3" name="answer6" value=4 class="accent-red-600 m-5 hover:cursor-pointer">
+                                <label for="q6-a3">Rock</label>
+                                </div>
+                                <div class="flex justify-items-center justify-center items-center text-xl">
+                                <input type="radio" id="q6-a4" name="answer6" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
+                                <label for="q6-a4">Indie</label>
+                                </div>
+                                <div class="flex justify-items-center justify-center items-center text-xl">
+                                <input type="radio" id="q6-a5" name="answer6" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                                <label for="q6-a5">Metal</label>
+                                </div>
+            
+                                <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                                    <button id="next-btn6" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                                    </div>
+                            
+                            </div>
+                            <!--Question 6-->
+                            <div id="question-6" class="w-full h-full hidden">
+                                <h2 class="flex justify-center text-4xl p-10" id="question">Choose something to drink</h2>
+                                        <div class="flex justify-items-center justify-center items-center text-xl">
+                                        <input type="radio" id="a1" name="answer" value=4 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                                        <label for="a1" id="answers">Tea/Coffee</label>
+                                        </div>
+                                        <div class="flex justify-items-center justify-center items-center text-xl">
+                                        <input type="radio" id="a2" name="answer" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a2" id="answers">Smoothie</label>
+                                        </div>
+                                        <div class="flex justify-items-center justify-center items-center text-xl">
+                                        <input type="radio" id="a3" name="answer" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a3" id="answers">Hot Chocolate</label>
+                                        </div>
+                                        <div class="flex justify-items-center justify-center items-center text-xl">
+                                        <input type="radio" id="a4" name="answer" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a4" id="answers">Water</label>
+                                        </div>
+                                        <div class="flex justify-items-center justify-center items-center text-xl">
+                                        <input type="radio" id="a5" name="answer" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a5" id="answers">Milk</label>
+                                        </div>
+                    
+                                        <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                                            <button id="next-btn" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                                            </div>
+                                    
+                                    </div>
+
+            </form>
+            <!--Fire Result-->
+            <div id="results-fire" class="w-full h-full hidden">
+                <div id="intro" class="w-full h-full flex flex-col flex-row">
+                    <h2 class="text-3xl p-5 flex justify-center">You are a Fire type Pokémon!</h2>
+                    
+                    <img src="fire-type.webp" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
+            </div>
+            <!--Water Result-->
+            <div id="results-water" class="w-full h-full hidden">
+                <div id="intro" class="w-full h-full flex flex-col flex-row">
+                    <h2 class="text-3xl p-5 flex justify-center">You are a Water type Pokémon!</h2>
+                    
+                    <img src="water-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
+            </div>
+            <!--Grass Result-->
+            <div id="results-grass" class="w-full h-full hidden">
+                <div id="intro" class="w-full h-full flex flex-col flex-row">
+                    <h2 class="text-3xl p-5 flex justify-center">You are a Grass type Pokémon!</h2>
+                    
+                    <img src="grass-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
+            </div>
+            <!--Normal Result-->
+            <div id="results-normal" class="w-full h-full hidden">
+                <div id="intro" class="w-full h-full flex flex-col flex-row">
+                    <h2 class="text-3xl p-5 flex justify-center">You are a Normal type Pokémon!</h2>
+                    
+                    <img src="normal-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
+            </div>
+            <!--Ghost Result-->
+            <div id="results-ghost" class="w-full h-full hidden">
+                <div id="intro" class="w-full h-full flex flex-col flex-row">
+                    <h2 class="text-3xl p-5 flex justify-center">You are a Ghost type Pokémon!</h2>
+                    
+                    <img src="ghost-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
+            </div>
+
+        </div>
+        </div>
+    
+
+
+<script src="quiz.js"></script>
+</body>
+</html>
