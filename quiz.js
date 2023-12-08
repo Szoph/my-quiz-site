@@ -24,40 +24,63 @@ function question2() {
 }
 
 function question3() {
+    //Reassign nextButton for the current question
     nextButton = document.getElementById('next-btn3');
     document.getElementById("question-2").style.display = "none";
     document.getElementById("question-3").style.display = "inline-block";
+    //Remove event listener
     nextButton.removeEventListener('click', question3);
+    //Add event listener for next question 
     nextButton.addEventListener('click', question4)
 }
 
 function question4() {
+    //Reassign nextButton for the current question
     nextButton = document.getElementById('next-btn4');
     document.getElementById("question-3").style.display = "none";
     document.getElementById("question-4").style.display = "inline-block";
+    //Remove event listener
     nextButton.removeEventListener('click', question4);
+    //Add event listener for next question
     nextButton.addEventListener('click', question5)
 }
 
 function question5() {
+    //Reassign nextButton for the current question
     nextButton = document.getElementById('next-btn5');
     document.getElementById("question-4").style.display = "none";
     document.getElementById("question-5").style.display = "inline-block";
+    //Remove event listener
     nextButton.removeEventListener('click', question5);
+    //Add event listener for next question
     nextButton.addEventListener('click', question6)
 }
 
 function question6() {
+    //Reassign nextButton for the current question 
     nextButton = document.getElementById('next-btn6');
     document.getElementById("question-5").style.display = "none";
     document.getElementById("question-6").style.display = "inline-block";
+    //Remove event listener
     nextButton.removeEventListener('click', question6);
+    //Add event listener for the next question
+    nextButton.addEventListener('click', question7)
+}
+function question7() {
+    //Reassign nextButton for the current question 
+    nextButton = document.getElementById('next-btn7');
+    document.getElementById("question-6").style.display = "none";
+    document.getElementById("question-7").style.display = "inline-block";
+    //Remove event listener
+    nextButton.removeEventListener('click', question7);
+    //Add event listener for results
     nextButton.addEventListener('click', results)
 }
 
 function results() { 
+document.getElementById("question-7").style.display = "none";
+document.getElementById("results").style.display = "inline-block";
 calculateResults()
-document.getElementById("question-6").style.display = "none";
 }
 
 function calculateResults() {
@@ -109,16 +132,24 @@ function calculateResults() {
             break;
         }
     }
+    const radios7 = document.querySelectorAll('input[name="answer7"');
+    let q7Value;
+    for (const rb of radios7) {
+        if (rb.checked) {
+            q7Value=rb.value;
+            break;
+        }
+    }
 
-    let total = (q1Value) + (q2Value) + (q3Value) + (q4Value) + (q5Value) + (q6Value);
-    results = total;
-    if (results >= 30) {
+    let total = Number(q1Value) + Number(q2Value) + Number(q3Value) + Number(q4Value) + Number(q5Value) + Number(q6Value) + Number(q7Value);
+    results = total / 2;
+    if (results >= 17.5) {
         document.getElementById('results-grass').style.display = 'inline-block';
-    } else if (result >= 24) {
+    } else if (results >= 13.5) {
         document.getElementById('results-fire').style.display = 'inline-block';
-    } else if (result >= 18) {
+    } else if (results >= 10.5) {
         document.getElementById('results-water').style.display = 'inline-block';
-    } else if (result >= 12) {
+    } else if (results >= 7) {
         document.getElementById('results-ghost').style.display = 'inline-block';
     } else {
         document.getElementById('results-normal').style.display = 'inline-block';

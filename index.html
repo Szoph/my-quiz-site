@@ -11,7 +11,7 @@
     }
  
     #background-image{
-    background-image: url(pokemon-bg-opaque.jpg);
+    background-image: url(bg-pic1.jpg);
     }
 </style>
 </head>
@@ -20,29 +20,28 @@
         <div id="background-image" class="h-screen w-full">
 
             <div id="title">
-            <h1 class="text-4xl flex justify-center p-10">What Pokémon type are you?</h1>
+            <h1 class="text-4xl text-white flex justify-center p-5">What Pokémon type are you?</h1>
             </div>
 
-            <div id="quizarea" class="bg-white flex justify-center h-3/4 w-auto justify-items-center">
+            <div id="quizarea" class="bg-sky-50 flex justify-center h-3/4 w-auto justify-items-center mt-5">
             <!--Intro Content-->
             <div id="intro" class="w-full h-full flex flex-col flex-row">
-                <h2 class="text-3xl p-5 flex justify-center">Find out what Pokémon type you are</h2>
-                <p class="flex justify-center">Answer the questions and get a result at the end.</p>
-                <img src="type-pic.jpg" class="h-96 w-96 flex justify-center self-center m-5">
+                <h2 class="text-3xl p-5 flex justify-center text-red-600">Find out what Pokémon type you are</h2>
+                <p class="flex justify-center text-xl p-2.5 text-red-600">Answer the questions and find out what type you are!</p>
+                <img src="type-pic.jpg" alt="Pokemon type picture" class="h-3/5 w-auto flex justify-center self-center rounded-full">
                 
-                <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
-                <button id="start-btn" value="start-quiz" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Start Quiz</button>
+                <div class="flex justify-center mt-5">
+                <button id="start-btn" value="start-quiz" class="pt-2.5 pb-2.5 pr-10 pl-10 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-900">Start Quiz</button>
                 </div>
             </div>
 
             <!--Quiz Content-->
             <!--Question 1-->
                 <div id="question-1" class="w-full h-full hidden">
-            <form onsubmit="return false">
-                    <h2 class="flex justify-center text-4xl p-10" id="question">What is your ideal vacation destination?</h2>
+                    <h2 class="flex justify-center text-4xl p-10 text-red-600" id="question">What is your ideal vacation destination?</h2>
                     <div class="flex justify-items-center justify-center items-center text-xl">
                     <input type="radio" id="q1-a1" name="answer1" value=4 class="accent-red-600 m-5 hover:cursor-pointer"> 
-                    <label for="q1-a1">Somewhere hot</label>
+                    <label for="q1-a1" >Somewhere hot</label>
                     </div>
                     <div class="flex justify-items-center justify-center items-center text-xl">
                     <input type="radio" id="q1-a2" name="answer1" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
@@ -61,7 +60,7 @@
                     <label for="q1-a5">Anywhere is fine</label>
                     </div>
                     <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
-                        <button id="next-btn1" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                        <button id="next-btn1" class="pt-2.5 pb-2.5 pr-5 pl-5 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-400">Next Question</button>
                         </div>
                     
                 
@@ -69,7 +68,7 @@
                 
                 <!--Question 2-->
                 <div id="question-2" class="w-full h-full hidden">
-                <h2 class="flex justify-center text-4xl p-10" id="question">What is your favourite colour?</h2>
+                <h2 class="flex justify-center text-4xl p-10 text-red-600" id="question">What is your favourite colour?</h2>
                             <div class="flex justify-items-center justify-center items-center text-xl">
                             <input type="radio" id="q2-a1" name="answer2" value=5 class="accent-red-600 m-5 hover:cursor-pointer"> 
                             <label for="q2-a1">Green</label>
@@ -90,22 +89,22 @@
                             <input type="radio" id="q2-a5" name="answer2" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
                             <label for="q2-a5">Yellow</label>
                             </div>
-                            <div class="p-10 mr-20 bottom-0 right-0 flex justify-end hidden">
-                                <button id="next-btn2" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                            <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
+                                <button id="next-btn2" class="pt-2.5 pb-2.5 pr-5 pl-5 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-400">Next Question</button>
                                 </div>
                             
                         
                         </div>
                         <!--Question 3-->
                         <div id="question-3" class="w-full h-full hidden">
-                            <h2 class="flex justify-center text-4xl p-10" id="question">What appeals to you the most</h2>
+                            <h2 class="flex justify-center text-4xl p-10 text-red-600" id="question">What appeals to you the most</h2>
                             <div class="flex justify-items-center justify-center items-center text-xl">
                              <input type="radio" id="q3-a1" name="answer3" value=1 class="accent-red-600 m-5 hover:cursor-pointer"> 
                             <label for="q3-a1">Sitting at home watching a movie</label>
                             </div>
                             <div class="flex justify-items-center justify-center items-center text-xl">
                             <input type="radio" id="q3-a2" name="answer3" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
-                            <label for="q4-a2">Swimming</label>
+                            <label for="q3-a2">Swimming</label>
                             </div>
                             <div class="flex justify-items-center justify-center items-center text-xl">
                             <input type="radio" id="q3-a3" name="answer3" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
@@ -121,13 +120,13 @@
                             </div>
                 
                             <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
-                            <button id="next-btn3" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                            <button id="next-btn3" class="pt-2.5 pb-2.5 pr-5 pl-5 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-400">Next Question</button>
                              </div>
                                 
                         </div>
                                 <!--Question 4-->
                     <div id="question-4" class="w-full h-full hidden">
-                         <h2 class="flex justify-center text-4xl p-10" id="question">Choose a dessert</h2>
+                         <h2 class="flex justify-center text-4xl p-10 text-red-600" id="question">Choose a dessert</h2>
                              <div class="flex justify-items-center justify-center items-center text-xl">
                             <input type="radio" id="q4-a1" name="answer4" value=4 class="accent-red-600 m-5 hover:cursor-pointer"> 
                             <label for="q4-a1">Cake & Custard</label>
@@ -150,13 +149,13 @@
                     </div>
                         
                     <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
-                     <button id="next-btn4" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                     <button id="next-btn4" class="pt-2.5 pb-2.5 pr-5 pl-5 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-400">Next Question</button>
                 </div>
                                         
             </div>
                 <!--Question 5-->
             <div id="question-5" class="w-full h-full hidden">
-                <h2 class="flex justify-center text-4xl p-10" id="question">Favourite film genre?</h2>
+                <h2 class="flex justify-center text-4xl p-10 text-red-600" id="question">Favourite film genre?</h2>
                         <div class="flex justify-items-center justify-center items-center text-xl">
                         <input type="radio" id="q5-a1" name="answer5" value=5 class="accent-red-600 m-5 hover:cursor-pointer"> 
                         <label for="q5-a1">Adventure</label>
@@ -179,15 +178,15 @@
                         </div>
     
                         <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
-                            <button id="next-btn5" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                            <button id="next-btn5" class="pt-2.5 pb-2.5 pr-5 pl-5 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-400">Next Question</button>
                             </div>
                     
                     </div>
                     <!--Question 6-->
-                    <div id="question-5" class="w-full h-full hidden">
-                    <h2 class="flex justify-center text-4xl p-10" id="question">Favourite music genre?</h2>
+                    <div id="question-6" class="w-full h-full hidden">
+                    <h2 class="flex justify-center text-4xl p-10 text-red-600" id="question">Favourite music genre?</h2>
                                 <div class="flex justify-items-center justify-center items-center text-xl">
-                                <input type="radio" id="q6-a1" name="answer6" value=1 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                                <input type="radio" id="q6-a1" name="answer5" value=1 class="accent-red-600 m-5 hover:cursor-pointer"> 
                                 <label for="q6-a1">Pop</label>
                                 </div>
                                 <div class="flex justify-items-center justify-center items-center text-xl">
@@ -208,80 +207,94 @@
                                 </div>
             
                                 <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
-                                    <button id="next-btn6" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                                    <button id="next-btn6" class="pt-2.5 pb-2.5 pr-5 pl-5 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-400">Next Question</button>
                                     </div>
                             
                             </div>
-                            <!--Question 6-->
-                            <div id="question-6" class="w-full h-full hidden">
-                                <h2 class="flex justify-center text-4xl p-10" id="question">Choose something to drink</h2>
+                            <!--Question 7-->
+                            <div id="question-7" class="w-full h-full hidden">
+                                <h2 class="flex justify-center text-4xl p-10 text-red-600" id="question">Choose something to drink</h2>
                                         <div class="flex justify-items-center justify-center items-center text-xl">
-                                        <input type="radio" id="a1" name="answer" value=4 class="accent-red-600 m-5 hover:cursor-pointer"> 
-                                        <label for="a1" id="answers">Tea/Coffee</label>
+                                        <input type="radio" id="a1" name="answer7" value=4 class="accent-red-600 m-5 hover:cursor-pointer"> 
+                                        <label for="a1">Tea/Coffee</label>
                                         </div>
                                         <div class="flex justify-items-center justify-center items-center text-xl">
-                                        <input type="radio" id="a2" name="answer" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
-                                        <label for="a2" id="answers">Smoothie</label>
+                                        <input type="radio" id="a2" name="answer7" value=5 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a2">Smoothie</label>
                                         </div>
                                         <div class="flex justify-items-center justify-center items-center text-xl">
-                                        <input type="radio" id="a3" name="answer" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
-                                        <label for="a3" id="answers">Hot Chocolate</label>
+                                        <input type="radio" id="a3" name="answer7" value=2 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a3">Hot Chocolate</label>
                                         </div>
                                         <div class="flex justify-items-center justify-center items-center text-xl">
-                                        <input type="radio" id="a4" name="answer" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
-                                        <label for="a4" id="answers">Water</label>
+                                        <input type="radio" id="a4" name="answer7" value=3 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a4">Water</label>
                                         </div>
                                         <div class="flex justify-items-center justify-center items-center text-xl">
-                                        <input type="radio" id="a5" name="answer" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
-                                        <label for="a5" id="answers">Milk</label>
+                                        <input type="radio" id="a5" name="answer7" value=1 class="accent-red-600 m-5 hover:cursor-pointer">
+                                        <label for="a5">Milk</label>
                                         </div>
                     
                                         <div class="p-10 mr-20 bottom-0 right-0 flex justify-end">
-                                            <button id="next-btn" class="pt-2.5 pb-2.5 pr-5 pl-5 bg-cyan-400 font-semibold rounded-lg hover:bg-red-600 hover:text-white">Next Question</button>
+                                            <button id="next-btn7" class="pt-2.5 pb-2.5 pr-5 pl-5 font-semibold rounded-lg bg-red-600 text-white hover:bg-red-400">Next Question</button>
                                             </div>
                                     
                                     </div>
 
-            </form>
+            <div id="results" class="w-full h-full hidden">
             <!--Fire Result-->
             <div id="results-fire" class="w-full h-full hidden">
                 <div id="intro" class="w-full h-full flex flex-col flex-row">
-                    <h2 class="text-3xl p-5 flex justify-center">You are a Fire type Pokémon!</h2>
-                    
-                    <img src="fire-type.webp" class="h-96 w-auto flex justify-center self-center m-5">
+                    <h2 class="text-3xl p-5 w-full h-auto flex justify-center text-red-600">You are a Fire type Pokémon!</h2>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-red-600 flex justify-center text-center text-2xl pr-10 pt-10 pl-10">Fire type Pokémon are very driven and can stay focused. They have a certain aura that makes them very popular even if they avoid attention. They deal with problems head on and can struggle with issues outside their interests.</p>
+                     <img src="fire-type.webp" alt="Fire type pokemon picture" class="h-96 w-auto flex justify-center self-center m-5">
+                     </div>
                     </div>
             </div>
             <!--Water Result-->
             <div id="results-water" class="w-full h-full hidden">
                 <div id="intro" class="w-full h-full flex flex-col flex-row">
-                    <h2 class="text-3xl p-5 flex justify-center">You are a Water type Pokémon!</h2>
-                    
-                    <img src="water-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    <h2 class="text-3xl p-5 flex justify-center text-cyan-400">You are a Water type Pokémon!</h2>
+                    <div class="flex flex-row justify-between">
+                        <p class="text-cyan-400 flex justify-center text-center text-2xl pr-10 pt-10 pl-10">Water type Pokémon are adaptable and well balanced. They are more likely to "go with the flow". They love water or the sense of calm water brings and can work well with virtually anyone. </p>
+                    <img src="water-type.jpeg" alt="Water type Pokemon picture" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
                     </div>
             </div>
             <!--Grass Result-->
             <div id="results-grass" class="w-full h-full hidden">
                 <div id="intro" class="w-full h-full flex flex-col flex-row">
-                    <h2 class="text-3xl p-5 flex justify-center">You are a Grass type Pokémon!</h2>
+                    <h2 class="text-3xl p-5 flex justify-center text-lime-500">You are a Grass type Pokémon!</h2>
+                    <div class="flex flex-row justify-between">
+                    <p class="text-lime-500 flex justify-center text-center text-2xl pr-10 pt-10 pl-10">Grass type Pokémon form special relationships with their environments. They love nature and living things, and are good at finding solutions in a creative way. </p>
                     
-                    <img src="grass-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    <img src="grass-type.jpeg" alt="Grass type Pokemon picture" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
                     </div>
             </div>
             <!--Normal Result-->
             <div id="results-normal" class="w-full h-full hidden">
                 <div id="intro" class="w-full h-full flex flex-col flex-row">
-                    <h2 class="text-3xl p-5 flex justify-center">You are a Normal type Pokémon!</h2>
+                    <h2 class="text-3xl p-5 flex justify-center text-zinc-400">You are a Normal type Pokémon!</h2>
+                    <div class="flex flex-row justify-between">
+                    <p class="text-zinc-400 flex justify-center text-center text-2xl pr-10 pt-10 pl-10">Normal type Pokémon may be common but they are also very diverse. They may enjoy and relate to extreme oddities and/or have a fondness for domestic life. They may struggle to stay focused and change their minds often. </p>
                     
-                    <img src="normal-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    <img src="normal-type.jpeg" alt="Normal type Pokemon picture" class="h-96 w-auto flex justify-center self-center m-5">
+                    </div>
                     </div>
             </div>
             <!--Ghost Result-->
             <div id="results-ghost" class="w-full h-full hidden">
                 <div id="intro" class="w-full h-full flex flex-col flex-row">
-                    <h2 class="text-3xl p-5 flex justify-center">You are a Ghost type Pokémon!</h2>
+                    <h2 class="text-3xl p-5 flex justify-center text-indigo-800">You are a Ghost type Pokémon!</h2>
+                    <div class="flex flex-row justify-between">
+                    <p class="text-indigo-800 flex justify-center text-center text-2xl pr-10 pt-10 pl-10">Ghost type Pokémon are mischievous and very funny (even if their sense of humour is very dark). They are interested in unusual history. They rarely deal with problems in a typical way and manay issues don't seem to bother them. </p>
                     
-                    <img src="ghost-type.jpeg" class="h-96 w-auto flex justify-center self-center m-5">
+                    <img src="ghost-type.jpeg" alt="Ghost type Pokemon picture" class="h-96 w-auto flex justify-center self-center m-5">
                     </div>
+                    </div>
+            </div>
             </div>
 
         </div>
